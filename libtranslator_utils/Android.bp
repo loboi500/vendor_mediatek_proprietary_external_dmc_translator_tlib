@@ -1,0 +1,87 @@
+mtk_cc_prebuilt_library {
+    arch: {
+        arm: {
+            cortex_a53: {
+                shared_libs: [
+                    "libasn1c_core",
+                    "libcutils",
+                    "liblog",
+                    "vendor.mediatek.hardware.mdmonitor@1.0",
+                    "libhidlbase",
+                    "libutils",
+                ],
+                srcs: [
+                    "arm_armv8-a_cortex-a53/libtranslator_utils.so",
+                ],
+            },
+            cortex_a55: {
+                shared_libs: [
+                    "libasn1c_core",
+                    "libcutils",
+                    "liblog",
+                    "vendor.mediatek.hardware.mdmonitor@1.0",
+                    "libhidlbase",
+                    "libutils",
+                ],
+                srcs: [
+                    "arm_armv8-2a_cortex-a55/libtranslator_utils.so",
+                ],
+            },
+            cortex_a7: {
+                shared_libs: [
+                    "libasn1c_core",
+                    "libcutils",
+                    "liblog",
+                    "vendor.mediatek.hardware.mdmonitor@1.0",
+                    "libhidlbase",
+                    "libutils",
+                ],
+                srcs: [
+                    "arm_armv7-a-neon_cortex-a7/libtranslator_utils.so",
+                ],
+            },
+        },
+        arm64: {
+            cortex_a53: {
+                shared_libs: [
+                    "libasn1c_core",
+                    "libcutils",
+                    "liblog",
+                    "vendor.mediatek.hardware.mdmonitor@1.0",
+                    "libhidlbase",
+                    "libutils",
+                ],
+                srcs: [
+                    "arm64_armv8-a_cortex-a53/libtranslator_utils.so",
+                ],
+            },
+            cortex_a55: {
+                shared_libs: [
+                    "libasn1c_core",
+                    "libcutils",
+                    "liblog",
+                    "vendor.mediatek.hardware.mdmonitor@1.0",
+                    "libhidlbase",
+                    "libutils",
+                ],
+                srcs: [
+                    "arm64_armv8-2a_cortex-a55/libtranslator_utils.so",
+                ],
+            },
+        },
+    },
+    export_include_dirs: [
+        "include/public",
+        "include",
+    ],
+    mtk_product_line: "tablet",
+    mtk_src_path: "vendor/mediatek/proprietary/external/dmc_translator",
+    mtk_type: "cc_prebuilt_library_shared",
+    name: "libtranslator_utils",
+    owner: "mtk",
+    proprietary: true,
+    strip: {
+        none: true,
+    },
+}
+

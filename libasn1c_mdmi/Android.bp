@@ -1,0 +1,71 @@
+mtk_cc_prebuilt_library {
+    arch: {
+        arm: {
+            cortex_a53: {
+                shared_libs: [
+                    "libcutils",
+                    "libasn1c_core",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-a_cortex-a53/libasn1c_mdmi.so",
+                ],
+            },
+            cortex_a55: {
+                shared_libs: [
+                    "libcutils",
+                    "libasn1c_core",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv8-2a_cortex-a55/libasn1c_mdmi.so",
+                ],
+            },
+            cortex_a7: {
+                shared_libs: [
+                    "libcutils",
+                    "libasn1c_core",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm_armv7-a-neon_cortex-a7/libasn1c_mdmi.so",
+                ],
+            },
+        },
+        arm64: {
+            cortex_a53: {
+                shared_libs: [
+                    "libcutils",
+                    "libasn1c_core",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-a_cortex-a53/libasn1c_mdmi.so",
+                ],
+            },
+            cortex_a55: {
+                shared_libs: [
+                    "libcutils",
+                    "libasn1c_core",
+                    "liblog",
+                ],
+                srcs: [
+                    "arm64_armv8-2a_cortex-a55/libasn1c_mdmi.so",
+                ],
+            },
+        },
+    },
+    export_include_dirs: [
+        "include",
+    ],
+    mtk_product_line: "tablet",
+    mtk_src_path: "vendor/mediatek/proprietary/external/dmc_translator",
+    mtk_type: "cc_prebuilt_library_shared",
+    name: "libasn1c_mdmi",
+    owner: "mtk",
+    proprietary: true,
+    strip: {
+        none: true,
+    },
+}
+
